@@ -169,8 +169,7 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            Log.i("My", "******* File not found. Did you" +
-                    " add a WRITE_EXTERNAL_STORAGE permission to the manifest?");
+            Log.i("My", "******* File not found *********");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -197,8 +196,7 @@ public class MainActivity extends AppCompatActivity {
             br.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            Log.i("My", "******* File not found. Did you" +
-                    " add a READ_EXTERNAL_STORAGE permission to the manifest?");
+            Log.i("My", "******* File not found *********");
         } catch (IOException e) {
             //You'll need to add proper error handling here
         } finally {
