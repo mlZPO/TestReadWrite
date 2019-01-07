@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    tools:context="MainActivity">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+
+            <TextView
+                android:id="@+id/tvStartInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/startInfo" />
+
+            <EditText
+                android:id="@+id/edStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/startTimeInit" />
+        </TableRow>
+
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+
+            <TextView
+                android:id="@+id/tvStopInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/stopInfo" />
+
+            <EditText
+                android:id="@+id/edStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/stopTimeInit"/>
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+
+            <TextView
+                android:id="@+id/tvSampFreqInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/sampFreq" />
+
+            <EditText
+                android:id="@+id/edSampFreq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/sampFreqInit" />
+        </TableRow>
+
+
+
+
+
+
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/saveToFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:onClick="onSaveFileClick"
+        android:text="@string/saveToFileLabel" />
+
+
+    <ScrollView
+        android:id="@+id/sView"
+        android:layout_below="@+id/iView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_weight="0.60"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/savedFileContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scrollbars="vertical"
+            android:text="@string/locFileInfo"
+            android:gravity="bottom" />
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+</LinearLayout>
